@@ -32,7 +32,7 @@ export class CarApiService {
    }
 
 
-  delCarDetails(carId:string):Observable<any> {
+  delCarDetails(carId:string | undefined):Observable<any> {
     let deleteURL=this._siteURL+":"+carId;
     return this._http.delete(deleteURL)
     .pipe(

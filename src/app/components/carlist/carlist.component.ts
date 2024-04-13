@@ -26,6 +26,10 @@ export class CarlistComponent {
     });
   }
 
+  refreshCars() {
+    this.getCars();
+  }
+
   addCar(make:string, model:string, year:string,imageUrl:string):boolean {
     let addCar:ICar;
     addCar=new NewCar(make,model,year,imageUrl);
@@ -33,6 +37,7 @@ export class CarlistComponent {
       { this.carsData = carsData}
     );
 
+    this.getCars();
     return false;
   }
 }
