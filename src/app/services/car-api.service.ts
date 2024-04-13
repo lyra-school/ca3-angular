@@ -9,7 +9,7 @@ import { ICar } from '../interfaces/car';
   providedIn: 'root'
 })
 export class CarApiService {
-  private _siteURL="http://localhost:5050/cars";
+  private _siteURL="http://3.254.131.124/cars";
   constructor(private _http:HttpClient) { }
   getCarDetails():Observable<any> {
 
